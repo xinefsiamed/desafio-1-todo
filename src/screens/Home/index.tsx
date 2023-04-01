@@ -2,6 +2,7 @@ import { View, TextInput, TouchableOpacity, Text} from 'react-native'
 import { styles } from './styles'
 import { Logo } from '../../components/Logo'
 import { PlusCircle } from 'phosphor-react-native'
+import { Todo } from '../../components/Todo'
 
 
 export function Home() {
@@ -24,7 +25,7 @@ export function Home() {
       </View>
     </View>
 
-    <View style={styles.listContainer}>
+    <View style={styles.secondContainer}>
        
 
         <View style={styles.summaryContainer}>
@@ -40,6 +41,15 @@ export function Home() {
           </View>
 
         </View>
+
+
+      <View style={styles.listContainer}>
+
+        <Todo />
+
+        <Todo />
+
+      </View>
 
 
     </View>

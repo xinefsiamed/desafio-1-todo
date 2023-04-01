@@ -37,7 +37,7 @@ export const styles = StyleSheet.create({
     borderRadius: 6,
   },
 
-  listContainer: {
+  secondContainer: {
     flex: 1,
     backgroundColor: '#1a1a1a',
     padding: 24,
@@ -77,6 +77,11 @@ export const styles = StyleSheet.create({
 
     fontSize: 12,
     fontFamily: 'Inter_700Bold',
+  },
+
+  listContainer: {
+    gap: 8,
+    marginTop: 20,
   }
 
 })
