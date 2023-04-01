@@ -4,28 +4,30 @@ import { Text, TouchableOpacity, View } from 'react-native'
 import { styles } from './styles'
 import { useState } from 'react'
 
-export function Todo(){
+interface TodoProps {
+  content: string,
+  checked: boolean,
+  handleChecked: () => void,
+  handleDelete: () => void
+}
 
-  const [check, setCheck] = useState(false)
 
-  function toggleChecked() {
-    setCheck(prevState => !prevState)
-  }
+export function Todo({content, checked, handleChecked, handleDelete }: TodoProps){
 
   return (
       <View style={styles.todoContent}>
-        <Checkbox style={styles.checkBox} value={check}  color={check ? '#5E60CE' : '#4EA8DE'}  onValueChange={toggleChecked}/>
+        <Checkbox style={styles.checkBox} value={checked}  color={checked ? '#5E60CE' : '#4EA8DE'} onValueChange={handleChecked}/>
 
         <Text 
           style={
-            check ? styles.todoContentTextChecked : styles.todoContentText
+            checked ? styles.todoContentTextChecked : styles.todoContentText
           }
           adjustsFontSizeToFit={true}
         >
-          Lorem 
+          {content}
         </Text>
 
-        <TouchableOpacity style={styles.trashButton}>
+        <TouchableOpacity style={styles.trashButton} onPress={handleDelete}>
           <Trash color='#808080'/>
         </TouchableOpacity>
       </View>

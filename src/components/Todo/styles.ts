@@ -16,6 +16,7 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
 
     gap: 8,
+    marginBottom: 8,
   },
 
   todoContentText: {

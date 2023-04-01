@@ -19,8 +19,8 @@ export const styles = StyleSheet.create({
     borderRadius: 6,
     backgroundColor: '#262626',
     fontSize: 16,
-    lineHeight: 140,
     padding: 16,
+    
     borderWidth: 1,
     borderColor: '#0d0d0d',
     color: '#f2f2f2',
@@ -80,7 +80,6 @@ export const styles = StyleSheet.create({
   },
 
   listContainer: {
-    gap: 8,
     marginTop: 20,
   }
 
